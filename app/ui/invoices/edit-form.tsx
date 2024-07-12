@@ -20,6 +20,7 @@ export default function EditInvoiceForm({
   customers: CustomerField[];
 }) {
 
+  // the type of initialstate is State type
   const initialState: State = { message: null, errors: {} };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
   const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
